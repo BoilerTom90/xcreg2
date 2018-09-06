@@ -1,0 +1,71 @@
+body {
+    padding-top: 0;
+    #background: url('images/xcbackground.jpg') no-repeat center center fixed;
+    #background: url('images/roger-bannister2.png') no-repeat center center fixed;
+    #background: url('images/louiszamp2.jpg') no-repeat center center fixed;
+    #background: url('images/hills.jpg') no-repeat center center fixed;
+    background: url('images/hillrunning.jpg') no-repeat center center fixed;
+    #background: url('images/running-race-winner.png') no-repeat center center fixed;
+    #background: url('images/running-a-race.jpg') no-repeat center center fixed;
+    #background: url('images/running-race-winner.png') no-repeat center center fixed;
+    #background: url('images/run-the-race.jpg') no-repeat center center fixed;
+    #background-color: black;
+    background-color: -webkit-linear-gradient(white, navy);
+    background-color: -o-linear-gradient(white, navy);
+    background-color: -moz-linear-gradient(white, navy);
+    background-color: linear-gradient(white, navy);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.bodycontainer {
+    max-height: 450px;
+    width: 100%;
+    margin: 0;
+    overflow-y: auto;
+}
+
+.table-scrollable {
+    margin: 0;
+    padding: 0;
+}
+
+div.panel-heading {
+    *background: red!important;
+}
+
+.set-bg {
+    background-color: white;
+    /* lightgray; */
+    opacity: 1;
+}
+
+.jumbotron {
+    margin-bottom: 30px;
+    color: inherit;
+    // background-image: url('images/stpeter.png');
+    // background-position: center;
+    background-color: #337ab7;
+    color: white;
+}
+
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+    width: 99%;
+    margin: auto;
+}
+
+.panel-default {
+    opacity: 0.9;
+    margin-top: 30px;
+}
+
+.panel-default>.panel-heading {
+    #background-color: #337ab7;
+}
+
+.form-group.last {
+    margin-bottom: 0px;
+}

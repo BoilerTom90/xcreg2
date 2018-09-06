@@ -1,0 +1,79 @@
++ meand it's done
+- means needs work
+
+Strategy for Events
+- When a nonAdin user logs in, they have to select the event for which they want to register their runners for.
+  They can only login if the event's regisration status is in the Open state. 
+- Admin users also select an event, for consistency, and because I don't know who's logging in when the menu 
+  is being formed, but because it's possible for no events to be populated in the system (fresh install), I have to
+  allow no Event to be selected, but only for Admin users.
+
++ Request Account
+   + concept works
++ Forgot Password
+   + concept works
+   - need to verify captcha and email on fatcow
++ Contact Admin
+   + concept works  
+   - need to verify emailing on fatcow.
+
+Events (presented to Admin Users Only)
+   + List View (Show the ID in leftmost column)
+   + Add
+   + Manage 
+   + Link to Races Mgmt
+   + Link to Runners Mgmt
+   + Delete w/ Confirmation Capability?
+
+Races (presented to Admin Users Only)
+   + List View
+   + Add
+   + Delete Race (if no runners)
+   + Modify Race Properties (Distance/Description)
+
+Pending Users (presented to Admin Users Only)
+
+Users (presented to Admin Users Only)
+
+Schools (presented to Admin Users Only)
+
+Runners
+   Coaches/NonAdmin View
+   + Add
+   + Change
+   + Delete
+   + List
+   + Print
+
+   Admin View
+   + Add
+   + Change
+   + Delete
+   + List
+   + Print
+
+NavBar 
+   + Home/XCREG
+   + Logout 
+   + Change Password (NonAdmin users only)
+      - Email New Password (only from real host [i.e. fatcow])
+
+
+This fixed the sessions problem
+   php.ini (fatcow)
+   /home/users/web/b1993/moo.thoffmannet/cgi-cib/tmp is the session path that is set .
+
+This fixed the google captcha problem
+   ; Whether to allow the treatment of URLs (like http:// or ftp://) as files.
+   ; http://php.net/allow-url-fopen
+   allow_url_fopen = On
+
+
+update schools set name = concat(name, ', IL') where name not like '%IL';
+
+select users.email as email,
+       schools.school_name as school
+       from users
+   inner join schools on schools.school_id = users.school_id
+   where schools.school_id > 0
+   order by email;

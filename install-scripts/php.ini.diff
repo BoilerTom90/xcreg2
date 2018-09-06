@@ -1,0 +1,42 @@
+696,714d695
+< ; Whether or not to register the EGPCS variables as global variables.  You may
+< ; want to turn this off if you don't want to clutter your scripts' global scope
+< ; with user data.
+< ; You should do your best to write your scripts so that they do not require
+< ; register_globals to be on;  Using form variables as globals can easily lead
+< ; to possible security problems, if the code is not very well thought of.
+< ; http://php.net/register-globals
+< register_globals = On
+< 
+< ; Determines whether the deprecated long $HTTP_*_VARS type predefined variables
+< ; are registered by PHP or not. As they are deprecated, we obviously don't
+< ; recommend you use them. They are on by default for compatibility reasons but
+< ; they are not recommended on production servers.
+< ; Default Value: On
+< ; Development Value: Off
+< ; Production Value: Off
+< ; http://php.net/register-long-arrays
+< register_long_arrays = On
+< 
+1469c1450
+< session.save_path = "4;/hermes/phpsessions"
+---
+> ;     session.save_path = "N;/path"
+1485c1466
+< session.save_path = "4;/hermes/phpsessions"
+---
+> ;     session.save_path = "N;MODE;/path"
+1490c1471
+< session.save_path = "4;/hermes/phpsessions"
+---
+> session.save_path = "/var/php_sessions"
+1934c1915,1916
+< ; XSL_SECPREF_CREATE_DIRECTORY | XSL_SECPREF_WRITE_NETWORK |Ã‚Â XSL_SECPREF_WRITE_FILE = 44
+---
+> ; XSL_SECPREF_CREATE_DIRECTORY | XSL_SECPREF_WRITE_NETWORK |
+> ; XSL_SECPREF_WRITE_FILE = 44
+1940c1922
+< ; End:
+\ No newline at end of file
+---
+> ; End:
